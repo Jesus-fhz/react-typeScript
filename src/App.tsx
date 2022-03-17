@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+//https://opentdb.com/api.php?amount=10&category=9
+import React,{useState} from 'react';
+import QuestionCard from './components/QuestionCard';
 import './App.css';
 
+
+
 function App() {
+
+  const [loading, setLoading] = useState(false); 
+  const [questions, setQuestions] = useState([]);
+
+  const  startTrivia = async () =>{
+
+  }
+                      //Could also be a MouseEvent Type
+  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) =>{
+  
+  }
+  
+  const nextQuestion = () => {
+  
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> React Ts  </h1>
+      <button onClick={startTrivia}>
+        Start 
+      </button>
+      <p>
+        Store:
+      </p>
+      <p>
+        Loading
+      </p>
+      <QuestionCard/>
+      <button onClick={nextQuestion}>
+        Next:
+      </button>
     </div>
   );
 }
